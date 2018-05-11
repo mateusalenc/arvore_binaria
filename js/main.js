@@ -1,18 +1,18 @@
 let tree = new BinaryTree();
 
 $( document ).ready(function() {
-    $('#btnInserir').click(insert);
-    $('#btnBuscar').click(search);
-    $('#btnRemover').click(remove);
-    $('#btnEmOrdem').click(showInOrder);
-    $('#btnPreOrdem').click(showInPreOrder);
-    $('#btnPosOrdem').click(showInPostOrder);
+    $('#insert').click(insert);
+    $('#search').click(search);
+    $('#remove').click(remove);
+    $('#inOrder').click(showInOrder);
+    $('#inPreOrder').click(showInPreOrder);
+    $('#inPostOrder').click(showInPostOrder);
 });
 
 function insert() {
     let num = parseInt(prompt("informe o numero a inserir na arvore:"));
     tree.insert(num);
-    show('Inserido: '+num);
+    show(num);
 }
 
 function remove() {
@@ -36,7 +36,7 @@ function showInPostOrder() {
 }
 
 function search() {
-    let num = parseInt(prompt("informe o numero a inserir na arvore:"));
+    let num = parseInt(prompt("informe o numero a procurar na arvore:"));
     tree.search(num);
     
 }
@@ -50,3 +50,4 @@ function show(item) {
 function include(item) {
     $('#saida').append(`<span class="ui label">${item}</span>`);
 }
+
