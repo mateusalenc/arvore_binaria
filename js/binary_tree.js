@@ -4,7 +4,7 @@ class BinaryTree{
     }
 
     insert(element){
-        let node = new Node(element);
+    let node = new Node(element);
         if(this.root === null){
             this.root = node;
         }else{
